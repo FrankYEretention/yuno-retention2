@@ -723,6 +723,7 @@
               <option value="Ed">Ed</option>
               <option value="__team__">Team Total</option>
             </select>
+            <button onclick="renderPerformanceTab()" style="background:var(--yuno);color:white;border:none;padding:6px 14px;border-radius:6px;cursor:pointer;font-size:0.78rem;font-weight:600;">🔄 Refresh</button>
           </div>
         </div>
         <div id="perfKPIs" class="kpi-grid"></div>
@@ -5538,9 +5539,9 @@ function renderPerformanceTab() {
     if (!agentArchives.length) {
         kpiEl.innerHTML = '<div style="padding:40px;text-align:center;color:var(--muted);">'
             +'<div style="font-size:2.5rem;margin-bottom:12px;">📦</div>'
-            +'<p style="font-size:1rem;margin-bottom:8px;">No archived months yet.</p>'
-            +'<p style="font-size:0.85rem;">Performance data will appear here once you close your first month via Bonus Settings.</p>'
-            +'<p style="font-size:0.85rem;margin-top:16px;">In the meantime, click <strong>✨ Load Demo Data</strong> above to see what this tab will look like.</p>'
+            +'<p style="font-size:1rem;margin-bottom:8px;">No archive data found.</p>'
+            +'<p style="font-size:0.85rem;">If you have already synced Firebase, click <strong>🔄 Refresh</strong> above.</p>'
+            +'<p style="font-size:0.85rem;margin-top:8px;">Otherwise go to <strong>Bonus Settings → Load from Firebase</strong> first, then click Refresh.</p>'
             +'</div>';
         return;
     }
